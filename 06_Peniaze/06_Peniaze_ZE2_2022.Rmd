@@ -1,0 +1,300 @@
+---
+title: "Peniaze a bankový systém"
+subtitle: "Základy ekonómie 2"
+author: "Dávid Hojdan"
+institute: "EÚ SAV - IFP"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
+theme_thesis <- theme_bw() +
+  theme(panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.border=element_blank(),
+        axis.line=element_line(),
+        text=element_text(family = "serif"),
+        legend.title=element_blank(),
+        legend.position = "top",
+        axis.text.y=element_text(size = 25),
+        axis.text.x=element_text(size = 25),
+        axis.title.x = element_text(size = 25),
+        axis.title.y = element_text(size = 25))
+```
+
+# Peniaze
+
+--
+
+**Čo sú peniaze?**
+
+--
+
+- akékoľvek aktívum, ktoré je všeobecne akceptované pri platení za tovary, služby alebo pri úhrade dlhu;
+
+--
+
+**Aké funkcie majú?**
+
+--
+
+- prostriedok výmeny 
+- uchovávateľ hodnoty
+- zúčtovacia jednotka
+
+--
+
+**Aký je rozdiel medzi M1, M2 a M3?**
+
+--
+
+- M1: obeživo, bankové vklady
+- M2: M1, termínované vklady 
+- M3: M2, veľké termínované vklady
+
+---
+# Sú kryptomeny peniaze?
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=10, fig.height= 7}
+btc <- read.csv(file = "C:/Users/david/OneDrive/Plocha/PhD/Ucenie/ZE2/zaklady_ekonomie_2/06_Peniaze/Raw_data/BTC-USD.csv") %>%
+  mutate(Date = as.Date(Date))
+
+btc_fig <- ggplot(btc, aes(x = Date, y = Close)) +
+  geom_line(size = 1) + 
+  xlab("") +
+  ylab("Cena Bitcoinu v USD") 
+
+btc_fig + theme_thesis
+```
+
+---
+
+---
+**Strana 89 / 1.3**
+
+Aký je, podľa vás, vzťah medzi peniazmi a bohatstvom? Ak niekto získa viac peňazí, vzrastie jeho bohatstvo?
+
+--
+
+**Strana 89 / 1.8**
+
+Vysvetlite pojem likvidita.
+
+--
+
+**Strana 94 / 2.17**
+
+Predpokladajme, že v krajine A predstavovali šekové vklady koncom roka 2015 160 mld. p. j. a termínované vklady 180 mld. p. j. Agregát M1 predstavoval 200 mld. p. j. Určte množstvo hotových peňazí v obehu a veľkosť agregátu M2.
+
+--
+
+
+---
+# Na čo sú nám  banky?
+
+--
+
+**Komerčné banky**
+
+--
+
+- prijímanie vkladov
+- poskytovanie úverov
+- realizácia platobného styku
+- poskytovanie dalších finančných služieb
+- ovplyvňovanie emisie úverových peňazí
+
+--
+
+**Centrálna banka**
+
+--
+
+- emisia obeživa 
+- zabezpečuje cenovú a menovú stabilitu 
+- spravuje devízové rezervy 
+- vykonáva dohľad nad činnosťou komerčných bánk
+- mala by byť nezávislá
+
+
+---
+
+#Tvorba peňazí
+Predpokladajme, že banka A získa vklad 1000 EUR a miera PMR stanovená centrálnou bankou je 10%. Potom banka A musí deponovať zákonom požadovaných 100 EUR v podobe povinných bankových rezerv a zvyšných 900 EUR predstauje prebytočné rezervy.
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(kableExtra)
+mult_table1 <- data.frame(
+  Aktíva = c("Rezervy", "Pôžičky a investície", "Spolu"),
+  EUR = c(100, 900, 1000),
+  Pasíva = c("Vklady", "", "Spolu"), 
+  EUR. = c(1000, "", 1000)
+)
+
+mult_table1 %>%
+  kbl() %>%
+  kable_paper("hover", full_width = F)
+```
+
+---
+#Tvorba peňazí
+Prírastok bankových peňazí $\Delta M$ vieme vypočítať ako: 
+$$\Delta M = \frac{1}{PMR} \times \Delta R$$
+kde $PMR$ je miera povinných minimálnych rezerv v % a $R$ je prírastok peňazí (rezerv) v bankovom systéme. Výraz $\frac{1}{PMR}$ je *peňažný multiplikátor*.
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+mult_table2 <- data.frame(
+  Banka = c("A (1. banka)", "B (2. banka)", "C (3. banka)", "...", "Spolu"),
+  Prírastok_bankových_vkladov = c(1000, 900, 810, "...", 10000),
+  Rezervy = c(100, 90, 81, "...", 1000), 
+  Úvery = c(900, 810, 729, "...", 9000)
+)
+
+mult_table2 %>%
+  kbl() %>%
+  kable_paper("hover", full_width = F)
+```
+
+---
+#Príklady 
+**1. Strana 107 / 6.6.**
+
+Aký bude prírastok ponuky peňazí, ak sa v bankovej sústave vytvoria nové rezervy vo výške 240 000EUR pri zákonnej miere rezerv 2%?
+
+--
+
+**2. Strana 107 / 6.7**
+
+Aká je miera povinných rezerv, ak sa vytvorenie nových rezerv vo výške 600 000EUR premietlo do prírastku ponuky peňazí vo výške 20 mil. EUR?
+
+--
+
+**3. Strana 108 / 6.13**
+
+Vypočítajte prírastok peňažnej masy v krajine, ak pri povinnej miere rezerv 10% došlo k zvýšeniu vkladov (rezerv) o 200 mil EUR.
+
+
+---
+#Čo robí centrálna banka?
+
+--
+
+**Ovplyvňuje množstvo rezerv - $R$ **
+
+- *Operácie na voľnom trhu* - CB nakupuje (zvyšuje rezervy) a predáva (znižuje rezervy) dlhopisy
+- *Pôžičky komerčným bankám* - CB môže požičať peniaze bankám, ktoré potrebujú dodatočnú likviditu za *úrokovú mieru* nastavenú CB (diskontná sadzba)
+
+--
+
+**Ovplyvňuje peňažný multiplikátor - $\frac{1}{PMR}$**
+
+- CB určuje *mieru povinných minimálnych rezerv* - ak zvýši PMR, peňažný multiplikátor sa zníži a naopak.
+- *Úroky na rezervách* - Komerčné banky si prebytočné rezervy musia ukladať na účtoch v CB. CB môže nastaviť úrok, ktorý bude bankám vyplácať za to, že majú rezervy uložené v CB. 
+
+--
+
+CB nemá plnú kontrolu nad ponukou peňazí v ekonomike - nevie ovplyvniť koľko peňazí budú držať ľudia v bankách ani to koľko úverov sú ochotné banky poskytnúť. 
+
+---
+#Dopyt a ponuka peňazí
+Hodnotu (cenu) peňazí ovplyvňuje dopyt a ponuka peňazí.
+- **Ponuku peňazí** ovplyvňuje v zjednodušenom svete centrálna banka. V skutočnom svete ju ovplyvňuje aj verejnosť (koľko obeživa vloží do banky) a komerčné banky, ktoré sa rozhodujú, koľko prebytočných rezerv budú držať. 
+- **Dopyt po peniazoch** odzrkadľuje chcenie ľudí držať svoj majetok v likvidnej forme (v peniazoch). Pri vyšších úrokoch je tendencia nakupovať skôr aktíva (napr. dlhopisy), ako držať hotovosť. 
+- Teória preferencie likvidity: transakčný, opatrnostný a špekulačný motív
+- Dopyt po peniazoch závisí od výšky dôchodku (produktu), úrokovej miery a cenovej hladiny
+
+
+---
+#Kvantitatívna teória peňazí
+
+- peniaze nemajú vnútornú hodnotu
+- zvýšenie množstva peňazí v obehu vyvolá zvýšenie cien, pretože to isté množstvo tovaru sa vymieňa za väčšie množstvo peňazí
+
+$$MV = PT $$
+$M$ je množstvo peňazí v obehu, $V$ symbolizuje rýchlosť peňazí v obehu, $P$ cenovú hladinu a $T$ množstvo peňažných transakcií v ekonomike.
+
+--
+
+S rovnicou výmeny sa stretnete aj v odlišnej podobe:
+
+$$MV = PY$$
+
+kde $Y$ je reálny HDP a po vynásobení $P$ dostávame na pravej strane rovnice nominálny HDP $PY$.
+
+- klasická dichotómia
+- *inflácia je vždy a všade peňažný jav!*
+
+---
+![sulik](images/sulik.png)
+---
+#Kvantitatívna teória v praxi (minulosť)
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=10, fig.height= 7}
+library(WDI)
+library(dplyr)
+library(tidyverse)
+library(plotly)
+
+df_past <- data.frame(
+WDI(country = "all",
+    indicator = c("FM.LBL.BMNY.ZG", "FP.CPI.TOTL.ZG", "NY.GDP.PCAP.PP.CD"),
+    start = 1990,
+    end = 2005,
+    extra = FALSE))
+
+df_past_fig <- df_past %>%
+  drop_na() %>%
+  group_by(country) %>%
+  summarize(Money_growth = mean(FM.LBL.BMNY.ZG),
+            CPI_inflation = mean(FP.CPI.TOTL.ZG),
+            GDP_percapita = mean(NY.GDP.PCAP.PP.CD)) %>%
+  filter(Money_growth < 250 & CPI_inflation < 250)
+  
+fig <- plot_ly(data = df_past_fig, x = ~Money_growth, y = ~CPI_inflation,
+  text = ~paste("Country: ", country),
+  color = ~GDP_percapita, size = ~GDP_percapita) %>%
+  layout(
+    xaxis = list(title = "Rast peňažnej bázy v rokoch 1990-2005 (v %)", range = c(0.1, 255)),
+    yaxis = list(title = "Inflácia v rokoch 1990-2005 (v %)", range = c(0, 255)),
+    shapes = list(list(type = 'line', x0 = 0, x1 = 250, y0 = 0, y1 = 250, line = list(width = 1))))
+
+fig
+```
+
+---
+#Kvantitatívna teória v praxi (súčasnosť)
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=10, fig.height= 7}
+df_recent <- data.frame(
+WDI(country = "all",
+    indicator = c("FM.LBL.BMNY.ZG", "FP.CPI.TOTL.ZG", "NY.GDP.PCAP.PP.CD"),
+    start = 2010,
+    end = 2019,
+    extra = FALSE))
+
+df_recent_fig <- df_recent %>%
+  drop_na() %>%
+  group_by(country) %>%
+  summarize(Money_growth = mean(FM.LBL.BMNY.ZG),
+            CPI_inflation = mean(FP.CPI.TOTL.ZG),
+            GDP_percapita = mean(NY.GDP.PCAP.PP.CD)) %>%
+  filter(Money_growth < 31 & CPI_inflation < 31)
+
+fig2 <- plot_ly(data = df_recent_fig, x = ~Money_growth, y = ~CPI_inflation,
+  text = ~paste("Country: ", country),
+  color = ~GDP_percapita, size = ~GDP_percapita) %>%
+  layout(
+    xaxis = list(title = "Rast peňažnej bázy v rokoch 2010-2019 (v %)", range = c(0.1, 32)),
+    yaxis = list(title = "Inflácia v rokoch 2010-2019 (v %)", range = c(0, 32)),
+    shapes = list(list(type = 'line', x0 = 0, x1 = 30, y0 = 0, y1 = 30, line = list(width = 1))))
+
+fig2
+```

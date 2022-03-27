@@ -64,7 +64,7 @@ theme_thesis <- theme_bw() +
 ---
 # Sú kryptomeny peniaze?
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=10, fig.height= 7}
-btc <- read.csv(file = "C:/Users/david/OneDrive/Plocha/PhD/Ucenie/ZE2/zaklady_ekonomie_2/06_Peniaze/Raw_data/BTC-USD.csv") %>%
+btc <- readr::read_csv(file = "https://raw.githubusercontent.com/davidqo1231/zaklady_ekonomie_2/main/06_Peniaze/Raw_data/BTC-USD.csv") %>%
   mutate(Date = as.Date(Date))
 
 btc_fig <- ggplot(btc, aes(x = Date, y = Close)) +
@@ -74,8 +74,6 @@ btc_fig <- ggplot(btc, aes(x = Date, y = Close)) +
 
 btc_fig + theme_thesis
 ```
-
----
 
 ---
 **Strana 89 / 1.3**
@@ -235,7 +233,7 @@ kde $Y$ je reálny HDP a po vynásobení $P$ dostávame na pravej strane rovnice
 - *inflácia je vždy a všade peňažný jav!*
 
 ---
-![sulik](images/sulik.png)
+![sulik](https://github.com/davidqo1231/zaklady_ekonomie_2/blob/main/06_Peniaze/Images/sulik.png?raw=true)
 ---
 #Kvantitatívna teória v praxi (minulosť)
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=10, fig.height= 7}

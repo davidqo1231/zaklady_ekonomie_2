@@ -113,7 +113,8 @@ eurostat <- search_eurostat("producer prices")
 hicp <- get_eurostat("prc_hicp_manr", filter = list(coicop  = "CP00")) %>%
   filter(geo == "SK")
 
-
+#cpi <- readr::read.csv("https://raw.githubusercontent.com/davidqo1231/zaklady_ekonomie_2/main/07_Inflacia/Raw_data/cpi_susr.csv", sep = ";") #%>%
+ # mutate(Date = as.Date(Date))
 
 ```
 

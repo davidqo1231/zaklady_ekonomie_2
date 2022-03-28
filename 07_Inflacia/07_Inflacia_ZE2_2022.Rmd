@@ -85,6 +85,8 @@ velocity_fig + theme_thesis
 **Importovaná inflácia**
 - Nadmerný AD v Česku sa môže preliať do pozitívneho šoku slovenského NX - prehrievanie
 
+--
+
 **Nákladová inflácia**
 - Ceny vstupov ovplyvňujú ceny finálnych produktov (zvýšenie cien energií, miezd)
 
@@ -97,14 +99,13 @@ velocity_fig + theme_thesis
 **Deflátor HDP**
 - Súhrný ukazovateľ vývoja cenovej hladiny
 - Filozoficky by mal odzrkadľovať zmeny cien všetkých T&S vyprodukovaných v ekonomike -> nie je založený na spotrebnom koši
-- *pozri ten excel ze jak sa skutocne rata
+- Môžeme ho vyjadriť ako pomer nominálneho a reálneho HDP, **ale** reálny HDP sa vyráta na základe deflátora, **ktorý musí niekto odhadnúť!**
+- Deflátor HDP meria ako sa mení zisk (a pridaná hodnota) z dôvodu cenových posunov vstupov a výstupov v ekonomike
 
 --
 
 $$\text{Deflátor HDP} = \frac{HDP_N}{HDP_R} = \frac{\sum p_t q_t}{\sum p_0 q_t} \times 100$$
 kde $HDP_N$ je nominálne a $HDP_R$ reálne HDP, $p_t$ sú ceny a $q_t$ je množstvo T&S v danom období, $p_0$ sú ceny T&S v bázickom období.
-
-- tu ešte niečo...
 
 ---
 #Cenové indexy

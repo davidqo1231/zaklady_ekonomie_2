@@ -100,7 +100,7 @@ velocity_fig + theme_thesis
 - Súhrný ukazovateľ vývoja cenovej hladiny
 - Filozoficky by mal odzrkadľovať zmeny cien všetkých T&S vyprodukovaných v ekonomike -> nie je založený na spotrebnom koši
 - Môžeme ho vyjadriť ako pomer nominálneho a reálneho HDP, **ale** reálny HDP sa vyráta na základe deflátora, **ktorý musí niekto odhadnúť!**
-- Deflátor HDP meria ako sa mení zisk (a pridaná hodnota) z dôvodu cenových posunov vstupov a výstupov v ekonomike
+- Deflátor HDP meria ako sa mení zisk (a pridaná hodnota) z dôvodu cenových posunov vstupov a výstupov v ekonomike.
 
 --
 

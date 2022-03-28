@@ -91,7 +91,7 @@ velocity_fig + theme_thesis
 - Ceny vstupov ovplyvňujú ceny finálnych produktov (zvýšenie cien energií, miezd)
 
 ---
-#Úlohy
+#Úlohy na AD-AS
 
 
 ---
@@ -158,10 +158,6 @@ svkindex_fig + theme_thesis
 ```
 
 ---
-#Príčiny
-- tu asi rozobrať skôr pri tom AD-AS niečo - to je podstatnejšie ako cenove indexy
-
----
 #Náklady inflácie
 **Náklady ošúchaných podrážok**
 - Vysoká inflácia znehodnocuje peniaze - ľudia budú držať peniaze na úročených účtoch a budú si ich musieť chodiť častejšie vyberať aby mali dokázali uspokojiť svoje potreby
@@ -185,6 +181,22 @@ svkindex_fig + theme_thesis
 #Ohrozené odvetvia
 ![ifp](https://github.com/davidqo1231/zaklady_ekonomie_2/blob/main/07_Inflacia/Images/energie.png?raw=true)
 
+---
+#Úlohy
+**2.10** Poznáte index spotrebiteľských cien na tri roky: CPI0 = 100,5; CPI1 = 101,2; CPI2 = 102,1. Vypočítajte mieru inﬂácie.
 
+--
 
+**2.13** V súvislosti s vývojom inﬂácie sa môžeme stretnúť s pojmom cielenie inﬂácie, resp. inﬂačné cielenie. Vysvetlite, o čo ide.
 
+--
+
+**3.4** Vysvetlite, prečo sú odlišné dôsledky v oblasti nákladov inﬂácie v prípade pro-porcionálnej, anticipovanej inﬂácie a v prípade neanticipovanej, neočakávanej inﬂácie.
+
+--
+
+**3.5** Vypočítajte, v akej výške získa sporiteľ reálny výnos z vkladu v banke vo výške 2 000 € v prípade, že nominálna úroková miera =3,5 % a miera inﬂácie je na úrovni 2 %? Musíme si takisto uvedomiť, že tento výnos ešte podlieha 19 % zdaneniu. Vypočí-tajte, ako zdanenie ovplyvní reálny výnos z vkladu
+
+--
+
+**5.2** Predpokladajme hypotetickú situáciu. Miera inﬂácie vzrástla v roku t + 1 z 3,1 na 3,6 %, resp.v inom prípade sa miera inﬂácie znížila zo 6% na 2,5 %? Rozhodnite, v ktorom prípade dochádza k dezinﬂácii.

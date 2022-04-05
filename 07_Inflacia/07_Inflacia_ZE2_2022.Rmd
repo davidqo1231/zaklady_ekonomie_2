@@ -175,10 +175,6 @@ svkindex_fig + theme_thesis
 - Vysoká inflácia znižuje reálne dlhy ale aj úspory
 
 ---
-#Ohrozené odvetvia
-![ifp](https://github.com/davidqo1231/zaklady_ekonomie_2/blob/main/07_Inflacia/Images/energie.png?raw=true)
-
----
 #Úlohy
 **2.10** Poznáte index spotrebiteľských cien na tri roky: CPI0 = 100,5; CPI1 = 101,2; CPI2 = 102,1. Vypočítajte mieru inﬂácie.
 

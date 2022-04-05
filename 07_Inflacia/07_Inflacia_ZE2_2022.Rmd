@@ -62,9 +62,9 @@ df_velocity <- data.frame(
   observation_end = as.Date("2021-12-31")))
 
 velocity_fig <- ggplot(df_velocity, aes(x = date, y = value)) +
-  geom_line(size = 1) + 
+  geom_line(size = 1.5) + 
   xlab("") +
-  ylab("Rýchlosť agregátu M2 v USA (nHDP/M2)") 
+  ylab("Rýchlosť agregátu M2 v USA (nHDP/M2")
 
 velocity_fig + theme_thesis
 
@@ -89,9 +89,6 @@ velocity_fig + theme_thesis
 
 **Nákladová inflácia**
 - Ceny vstupov ovplyvňujú ceny finálnych produktov (zvýšenie cien energií, miezd)
-
----
-#Úlohy na AD-AS
 
 
 ---
@@ -200,3 +197,95 @@ svkindex_fig + theme_thesis
 --
 
 **5.2** Predpokladajme hypotetickú situáciu. Miera inﬂácie vzrástla v roku t + 1 z 3,1 na 3,6 %, resp.v inom prípade sa miera inﬂácie znížila zo 6% na 2,5 %? Rozhodnite, v ktorom prípade dochádza k dezinﬂácii.
+
+---
+#Čo ide hore?
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=11, fig.height= 7}
+library(openxlsx)
+df <- read.xlsx("C:/Users/david/Dropbox/inflacia_economist/inflacia_data.xlsx", "COICOP3") %>%
+    mutate(vaha = vaha/10)
+
+df <- df %>%
+  filter(inflacia > -20)
+
+df$right <- cumsum(df$vaha) + 0*c(0:(nrow(df)-1))
+df$left <- df$right - df$vaha
+
+x.axis.labels <- seq(10, 100, 10) # positions of the subtle ticks
+y.axis.labels <- seq(0,30,10)
+
+grafik <- ggplot(df, aes(ymin = 0)) + 
+    geom_rect(aes(xmin = left, xmax = right, ymax = inflacia, fill = highlight), color = "black", size = 0.1) +
+    scale_fill_manual(values = c( "yes"= "#2EAAE1", "no" = "#A9DAF0" ), guide = FALSE ) +
+
+    xlab("Kumulatívny podiel na spotrebnom koši v %") + 
+    ylab("") +
+  theme_minimal() +
+    theme(legend.position = "none",
+          panel.background = element_rect(fill = 'white', colour = 'white'),
+          plot.background = element_rect(fill = "white", colou = "white"),
+          panel.grid.major.y = element_line(size = 0.15, colour = "grey"),
+          panel.grid.minor.y = element_blank(),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          axis.text.x=element_blank(),
+          axis.ticks.x=element_blank(),
+          axis.title.x = element_text(vjust=6),
+          axis.text.y = element_blank(),
+          text=element_text(family = "serif", size = 14, color = "#555555")) +
+  geom_hline(yintercept = 0, size = 0.5, linetype = 1, alpha = 0.7) +
+  annotate(geom='text', x=x.axis.labels, y = -0.8, label=x.axis.labels, vjust=1, family = "serif", size = 5, color = "#555555") +
+  annotate(geom='segment', x=x.axis.labels, xend=x.axis.labels,  y = 0, yend=-0.5, size = 0.5) +
+  scale_y_continuous(position = "right") +
+  coord_cartesian(ylim = c(-2, 37), xlim = c(0, 100), clip = "off") +
+ 
+  
+  annotate(geom='text', x=105, y = y.axis.labels, label = y.axis.labels, vjust=-0.3, hjust = 1, family = "serif", size = 5, color = "#555555") +
+  
+  annotate("text", x = 93, y = 34, label = "Jedálne", color = "black", family = "serif", size = 4.5) +
+  annotate("segment", x = 99.1, xend = 96.5, y = 34, yend = 34, colour = "black", size = 0.5) +
+  annotate("point", x = 99.1, y = 34, colour = "black", size = 2) +
+  
+  annotate("text", x = 95.7, y = 28, label = "Palivá", color = "black", family = "serif", size = 4.5) +
+  annotate("segment", x = 96, xend = 96, y = 27, yend = 20.5, colour = "black", size = 0.5) +
+  annotate("point", x = 96, y = 20.5, colour = "black", size = 2) +
+
+  annotate("text", x = 91.3, y = 23.5, label = "Plyn", color = "black", family = "serif", size = 4.5) +
+  annotate("segment", x = 91.3, xend = 91.3, y = 22, yend = 19, colour = "black", size = 0.5) +
+  annotate("point", x = 91.3, y = 19, colour = "black", size = 2) +
+
+  annotate("text", x = 84, y = 19,label = "Imputované\n nájomné", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 84, xend = 84, y = 17, yend = 14.5, colour = "black", size = 0.5) +
+  annotate("point", x = 84, y = 14.5, colour = "black", size = 2) +
+
+  annotate("text", x = 70.1, y = 15,label = "Elektrina", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 70.1, xend = 70.1, y = 14, yend = 11, colour = "black", size = 0.5) +
+  annotate("point", x = 70.1, y = 11, colour = "black", size = 2) +
+
+  annotate("text", x = 53, y = 11.5,label = "Reštaurácie", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 53, xend = 53, y = 10.5, yend = 8.6, colour = "black", size = 0.5) +
+  annotate("point", x = 53, y = 8.6, colour = "black", size = 2) +
+
+  annotate("text", x = 45.7, y = 14,label = "Ovocie", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 45.7, xend = 45.7, y = 13, yend = 6.3, colour = "black", size = 0.5) +
+  annotate("point", x = 45.7, y = 6.3, colour = "black", size = 2) +
+
+  annotate("text", x = 33.5, y = 7,label = "Mäso", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 33.5, xend = 33.5, y = 6, yend = 4.5, colour = "black", size = 0.5) +
+  annotate("point", x = 33.5, y = 4.5, colour = "black", size = 2) +
+
+  annotate("text", x = 30, y = 11.5,label = "Knihy", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 30, xend = 30, y = 10.5, yend = 4.2, colour = "black", size = 0.5) +
+  annotate("point", x = 30, y = 4.2, colour = "black", size = 2) +
+
+  annotate("text", x = 14.5, y = 4,label = "Lieky", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 14.5, xend = 14.5, y = 3, yend = 0.8, colour = "black", size = 0.5) +
+  annotate("point", x = 14.5, y = 0.8, colour = "black", size = 2) +
+
+  annotate("text", x = 2.6, y = 2.5,label = "Pivo", color = "black",family = "serif", size = 4.5) +
+  annotate("segment", x = 2.6, xend = 2.6, y = 1.5, yend = 0, colour = "black", size = 0.5) +
+  annotate("point", x = 2.6, y = 0, colour = "black", size = 2)
+
+grafik
+
+```

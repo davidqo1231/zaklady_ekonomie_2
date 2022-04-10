@@ -104,12 +104,22 @@ nezamestnanosť nízka a nízka pokiaľ je nezamenstnanosť vysoká”* - Philli
 
 ---
 #Phillipsova krivka
-Cenová (Solow a Samuelson) - implikácie do AD-AS 
+Samuelson a Solow nahradili rast nominálnych miezd cenovou hladinou. 
+- Pri nízkej nezamestnanosti a nedostatku voľných pracovných síl sa zvyšuje tlak na rast nominálnych miezd, čo zvyšuje náklady firiem, ktoré sa následne začnú premietať aj do konečných cien
 
+
+<img src="https://raw.githubusercontent.com/davidqo1231/zaklady_ekonomie_2/main/08_Nezamestnanost/Images/philips_curve_samuelson.png"
+     width="400px" height="300px"
+     style="position:absolute; right:180px; top:300px;">
 
 ---
 #Phillipsova krivka na Slovensku
-- dvoje grafy - stvrtrocna philipsova krivka
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2}
+
+
+
+```
+
 
 
 ---

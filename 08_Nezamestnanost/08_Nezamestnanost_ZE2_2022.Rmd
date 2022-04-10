@@ -98,7 +98,18 @@ NAIRU (Non Accelerating Inflation Rate of Unemployment) - miera nezamestnanosti,
 nezamestnanosť nízka a nízka pokiaľ je nezamenstnanosť vysoká”* - Phillips 1958
 
 
+<img src="https://raw.githubusercontent.com/davidqo1231/zaklady_ekonomie_2/main/08_Nezamestnanost/Images/philips_curve.png"
+     width="500px" height="400px"
+     style="position:absolute; right:180px; top:250px;">
 
+---
+#Phillipsova krivka
+Cenová (Solow a Samuelson) - implikácie do AD-AS 
+
+
+---
+#Phillipsova krivka na Slovensku
+- dvoje grafy - stvrtrocna philipsova krivka
 
 
 ---

@@ -31,7 +31,6 @@ theme_thesis <- theme_bw() +
         axis.title.y = element_text(size = 25))
 ```
 
----
 #Základné pojmy
 
 **Zamestnaní** – sú ľudia, ktorí vykonávajú *akúkoľvek platenú prácu*, ale aj tí, ktorí majú prácu, nepracujú však pre chorobu, štrajk alebo dovolenku
@@ -113,20 +112,64 @@ Samuelson a Solow nahradili rast nominálnych miezd cenovou hladinou.
      style="position:absolute; right:180px; top:300px;">
 
 ---
-#Phillipsova krivka na Slovensku
-```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2}
+#Phillipsova krivka
+####Mzdová Phillipsova krivka (2010-2019)
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=10, fig.height= 6}
+library(openxlsx)
+library(ggpmisc)
 
+phillips_sk <- read.xlsx("https://github.com/davidqo1231/zaklady_ekonomie_2/blob/main/08_Nezamestnanost/Raw_data/Data.xlsx?raw=true", "data")
 
+mzdova <- phillips_sk %>% 
+  filter(time < 41) %>% 
+  ggplot(., aes(x = unemp, y = nwage_yoy)) +
+  xlab("Miera nezamestnanosti (v %)") +
+  ylab("Rast nominálnych miezd (v %)") +
+  geom_point(size = 3) +
+  geom_line() +
+  geom_smooth(method = "lm", se=FALSE, color="blue", formula = y ~ poly(x,2), size = 1.5) +
+  stat_poly_eq(formula = y ~ poly(x,2),
+                eq.with.lhs = "italic(hat(y))~`=`~",
+                aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")), 
+                parse = TRUE) + 
+  theme_thesis
 
+mzdova
+```
+---
+#Phillipsova krivka
+####Cenová Phillipsova krivka (2014-2019)
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width=10, fig.height= 6}
+cenova <- phillips_sk %>% 
+  filter(time < 41 & time > 16) %>% 
+  ggplot(., aes(x = unemp, y = cpi_yoy)) +
+  xlab("Miera nezamestnanosti (v %)") +
+  ylab("CPI inflácia (v %)") +
+  geom_point(size = 3) +
+  geom_line() +
+  geom_smooth(method = "lm", se=FALSE, color="blue", formula = y ~ poly(x,2), size = 1.5) +
+  stat_poly_eq(formula = y ~ poly(x,2),
+                eq.with.lhs = "italic(hat(y))~`=`~",
+                aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")), 
+                parse = TRUE) + 
+  theme_thesis
+
+cenova
 ```
 
-
-
 ---
-#Okunov zákon
+#Zaujímavosti
+- Vplyv antikoncepcie na participáciu žien na trhu práce - [video](https://www.youtube.com/watch?v=b34k9tmcRTk&list=PL-uRhZ_p-BM52EbMG1NR1ZfG9tEvcxE4u&index=44)
 
+- **Ďalšie videá (MRU):** [frikčná nezamestnanosť](https://www.youtube.com/watch?v=kU11c094ykM&list=PL-uRhZ_p-BM52EbMG1NR1ZfG9tEvcxE4u&index=38), [štrukturálna nezamestnanosť](https://www.youtube.com/watch?v=_t-ZDHFr73s&list=PL-uRhZ_p-BM52EbMG1NR1ZfG9tEvcxE4u&index=39), [cyklická nezamestnanosť](https://www.youtube.com/watch?v=Y5K8__QTF2I&list=PL-uRhZ_p-BM52EbMG1NR1ZfG9tEvcxE4u&index=40), [participácia na trhu práce](https://www.youtube.com/watch?v=te8xXRaVWl4&list=PL-uRhZ_p-BM52EbMG1NR1ZfG9tEvcxE4u&index=41)
 
+- Dáta o trhu práce: [Eurostat](https://ec.europa.eu/eurostat/data/database), [ŠÚSR datacube](http://datacube.statistics.sk/#!/lang/sk/?utm_source=susr_portalHP&utm_medium=page_database&utm_campaign=DATAcube_portalHP), 
 
+- Kto k nám prichádza z Ukrajiny? - [IFP monitor](https://infogram.com/ifp-monitor-142022-1hd12yxygm0yw6k?live&fbclid=IwAR3ooM2Jd1of84vlgKzbtOAsD_3-MnrAVJfYCF9EECBm0uJq87i3D2UsFNI)
+
+- Prvá pomoc podnikom (počas pandémie) udržala zamestnanosť - [analýza IFP & UHP](https://www.facebook.com/ifp.mfsr/posts/348350803989963)
+
+- Efekty minimálnej mzdy na ekonomiku - [The Economist](https://www.youtube.com/watch?v=8H4yp8Fbi-Y)
 
 
 

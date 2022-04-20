@@ -30,3 +30,112 @@ theme_thesis <- theme_bw() +
         axis.title.x = element_text(size = 25),
         axis.title.y = element_text(size = 25))
 ```
+
+---
+#Čo je menová politika?
+**Základné politiky:**
+- Menová politika –> inflácia
+- Fiškálna politika –> príjmy a výdavky štátu, dane
+- Kurzová politika –> výmenný kurz
+- Makroprudenciálna politika a pravidlá dohľadu nad bankami –> schopnosť bánk
+tvoriť peniaze
+- Cenová politika –> regulované ceny
+
+**Menová politika** – spočíva v tom, že centrálna banka reguluje krátkodobé úrokové sadzby s cieľom ovplyvniť infláciu, prípadne HDP a zamestnanosť
+- Expanzívna
+- Reštriktívna
+
+---
+#Fungovanie menovej politiky
+**Hlavný nástroj:**
+- Operácie na voľnom trhu (typ, rozsah + stanovenie základnej úrokovej sadzby)
+- Ďalšie neštandardné operácie (Forward guidance, QE, negatívne sadzby)
+- Výška povinných minimálnych rezerv (PMR sú skôr „pravidlá hry“ ako aktívny nástroj)
+
+**Bezprostredný cieľ:**
+- Krátkodobá úroková sadzba (EURIBOR)
+
+**Medzicieľ:**
+- Množstvo peňazí
+- Výmenný kurz
+- Limity na objem úverov
+- Limity na úrokové sadzby vkladov a úverov
+
+**Hlavný cieľ:** Cenová stabilita – cielenie inflácie (ECB, Bank of England, ČNB), ekonomický rast a zamestnanosť (len Fed)
+
+---
+#Štandardné operácie ECB
+**Povinné minimálne rezervy (1 % vkladov)**
+- Čiastočné môžu prispieť k ovplyvňovaniu miery poskytovania úverov
+- Niektoré krajiny ich úplne zrušili (Austrália, Švédsko, Kanada)
+
+**Automatické operácie**
+- Jednodňové operácie (overnight) s cieľom získať chýbajúcu likviditu alebo uložiť prebytočnú likviditu
+
+**Operácie na voľnom trhu**
+- Hlavné refinančné a sterilizačné operácie (týždňové) – na báze aukcie
+- Dlhodobé refinančné operácie
+
+---
+#Forma operácií na voľnom trhu
+**Refinančné operácie – repo obchody**
+- Centrálna banka poskytne peniaze komerčným bankám, ktoré jej ako zálohu dajú nejaké aktívum (väčšinou cenné papiere)
+
+**Sterilizačné operácie – obrátené repo obchody**
+- Banky poskytnú peniaze centrálnej banke, ako zálohu dostanú cenný
+papier
+
+
+---
+#Menová politika
+Ovplyvňovanie množstva peňazí v obehu, alebo niektorých administratívnych pravidiel ich obehu.
+
+--
+
+**Ciele menovej politiky**
+- **Cenová stabilita** - cieľ väčšiny moderných centrálnych bánk
+- **Kurzová stabilita** - najmä v menších, rozvojových krajinách
+- **Menová stabilita** - kombinácia cenovej a menovej stability
+- Stabilizácia miery nezamestnanosti / zmierňovanie hospodárskych cyklov
+- Stabilita finančného sektora
+- V minulosti aj: financovanie vlády
+
+--
+
+**Nástroje centrálnej banky**
+- Úrokové miery (cena peňazí): centrálna banka určuje krátkodobú úrokovú mieru, za ktorú požičiava
+súkromným bankám
+- Operácie na voľnom trhu: CB nakupuje / predáva dlhopisy na trhu cenných papierov, čím dodáva / uberá peniaze z finančného trhu
+- Operácie na devízovom trhu: nákup / predaj cudzej meny za vlastnú
+- Administratívne nástroje: PMR, fixný kurz, reštrikcie na zahraničné platby
+
+---
+#Funguje to?
+**Dopyt po peniazoch:** krivka dopytu po peniazoch je klesajúca, domácnosti chcú držať viac peňazí, keď ich cena - úroková miera je nízka
+
+--
+
+**Kvantitatívna teória peňazí**
+- Rýchlosť obehu peňazí by mala byť fixná (alebo sa mení pomaly)
+- Zmena $M$, potom vedie k inflácii (zmena $P$) alebo ovplyvní HDP $(Y)$
+- Ak $Y$ je dlhodobo dané produktivitou a potenciálom ekonomiky, zmeny $M$ vedú potom k rastu, či poklesu inflácie
+
+$$MV = PY$$
+- V krátkom období, však tento vzťah veľmi dobre neplatí
+
+---
+#Transmisný mechanizmus
+
+
+
+
+
+
+
+
+
+
+
+
+
+

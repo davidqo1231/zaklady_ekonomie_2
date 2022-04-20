@@ -9,3 +9,9 @@ https://davidqo1231.github.io/zaklady_ekonomie_2/07_Inflacia/07_Inflacia_ZE2_202
 
 ### 8. týždeň - Nezamestnanosť
 https://davidqo1231.github.io/zaklady_ekonomie_2/08_Nezamestnanost/08_Nezamestnanost_ZE2_2022.html
+
+### 9. týždeň - Fiškálna politika
+https://davidqo1231.github.io/zaklady_ekonomie_2/09_Fiskalna_politika/09_Fiskalna_politika_ZE2_2022.html
+
+### 10. týždeň - Monetárna politika
+https://davidqo1231.github.io/zaklady_ekonomie_2/10_Monetarna_politika/10_Monetarna_politika_ZE2_2022.html

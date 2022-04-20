@@ -31,7 +31,6 @@ theme_thesis <- theme_bw() +
         axis.title.y = element_text(size = 25))
 ```
 
----
 #Štátny rozpočet
 
 - Štátny rozpočet je súčasťou verejnej správy, je však len jedným priečinkom v peňaženke štátu

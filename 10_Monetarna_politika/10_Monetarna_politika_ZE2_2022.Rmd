@@ -31,62 +31,6 @@ theme_thesis <- theme_bw() +
         axis.title.y = element_text(size = 25))
 ```
 
----
-#Čo je menová politika?
-**Základné politiky:**
-- Menová politika –> inflácia
-- Fiškálna politika –> príjmy a výdavky štátu, dane
-- Kurzová politika –> výmenný kurz
-- Makroprudenciálna politika a pravidlá dohľadu nad bankami –> schopnosť bánk
-tvoriť peniaze
-- Cenová politika –> regulované ceny
-
-**Menová politika** – spočíva v tom, že centrálna banka reguluje krátkodobé úrokové sadzby s cieľom ovplyvniť infláciu, prípadne HDP a zamestnanosť
-- Expanzívna
-- Reštriktívna
-
----
-#Fungovanie menovej politiky
-**Hlavný nástroj:**
-- Operácie na voľnom trhu (typ, rozsah + stanovenie základnej úrokovej sadzby)
-- Ďalšie neštandardné operácie (Forward guidance, QE, negatívne sadzby)
-- Výška povinných minimálnych rezerv (PMR sú skôr „pravidlá hry“ ako aktívny nástroj)
-
-**Bezprostredný cieľ:**
-- Krátkodobá úroková sadzba (EURIBOR)
-
-**Medzicieľ:**
-- Množstvo peňazí
-- Výmenný kurz
-- Limity na objem úverov
-- Limity na úrokové sadzby vkladov a úverov
-
-**Hlavný cieľ:** Cenová stabilita – cielenie inflácie (ECB, Bank of England, ČNB), ekonomický rast a zamestnanosť (len Fed)
-
----
-#Štandardné operácie ECB
-**Povinné minimálne rezervy (1 % vkladov)**
-- Čiastočné môžu prispieť k ovplyvňovaniu miery poskytovania úverov
-- Niektoré krajiny ich úplne zrušili (Austrália, Švédsko, Kanada)
-
-**Automatické operácie**
-- Jednodňové operácie (overnight) s cieľom získať chýbajúcu likviditu alebo uložiť prebytočnú likviditu
-
-**Operácie na voľnom trhu**
-- Hlavné refinančné a sterilizačné operácie (týždňové) – na báze aukcie
-- Dlhodobé refinančné operácie
-
----
-#Forma operácií na voľnom trhu
-**Refinančné operácie – repo obchody**
-- Centrálna banka poskytne peniaze komerčným bankám, ktoré jej ako zálohu dajú nejaké aktívum (väčšinou cenné papiere)
-
-**Sterilizačné operácie – obrátené repo obchody**
-- Banky poskytnú peniaze centrálnej banke, ako zálohu dostanú cenný
-papier
-
-
----
 #Menová politika
 Ovplyvňovanie množstva peňazí v obehu, alebo niektorých administratívnych pravidiel ich obehu.
 
@@ -125,10 +69,55 @@ $$MV = PY$$
 
 ---
 #Transmisný mechanizmus
+<img src="https://raw.githubusercontent.com/davidqo1231/zaklady_ekonomie_2/main/10_Monetarna_politika/Images/transmisny_mech.png"
+     width="1083px" height="541px"
+     style="position:absolute; right:10px; top:120px;">
+     
+
+---
+#Transmisný mechanizmus
+**Od peňazí k inflácii**
+1. Majme viac peňazí v obehu
+2. Ten, kto drží peniaze sa cíti bohatší, začne viac míňať
+3. Rast celkového dopytu
+4. Aby sa vyrovnal dopyt s ponukou (výrobou), musia stúpnuť predajné ceny -> **inflácia**
+5. Ak by výrobcovia nechceli zvýšiť ceny, musia zvýšený dopyt uspokojiť vyššou produkciou: viac zamestnancov, nadčasy,... -> vyššie náklady ... náklady sa neskôr premietnu do cien -> inflácia
+
+--
+
+**Od úrokovej miery k inflácii**
+1. Nech centrálna banka zníži úrokovú mieru
+2. Lacnejšie úvery a hypotéky
+ - niektoré podniky viac investujú, domácnosti kúpia viac bytov a domov
+ - vyššia spotreba a investície, t.j. vyšší AD -> tlak na rast cien, inflácia 
+3. Stúpnu ceny akcií a dlhopisov
+ - ich majitelia sa cítia bohatší, viac spotrebujú, t.j. stúpne AD -> inflácia
+4. Pre zahraničných investorov je naša mena menej atraktívna... -> inflácia
+
+---
+#Expanzívna a reštriktívna MP
+**Expanzívna MP**
+- Zníženie úrokov / zvýšenie M
+- Tiež krátkodobé zvýšenie HDP, vyššie investície a spotreba
+- Zníženie miery nezamestnanosti
+
+--
+
+**Reštriktívna MP**
+- Zvýšenie úrokov / pokles M
+- Tiež krátkodobý pokles HDP, nižšie investície a spotreba
+- Rast miery nezamestnanosti
+
+---
+#Úlohy
 
 
-
-
+---
+#Zaujímavosti
+- Slidy som ukradol z prednášky Martina Šustera [Menová politika - ciele, nástroje, výkon](https://www.youtube.com/watch?v=lG8zkKGQfjE)
+- Ďalšie zaujímave prednašky od Martina Šustera:
+ - [Menová politika Eurosystému](https://www.youtube.com/watch?v=sdIBGjZyQ10)
+ - [Eurozóna a NBS](https://www.youtube.com/watch?v=YzHTSrna8Rw)
 
 
 

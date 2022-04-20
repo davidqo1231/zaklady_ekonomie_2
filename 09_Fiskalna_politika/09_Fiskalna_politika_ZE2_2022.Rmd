@@ -1,0 +1,97 @@
+---
+title: "Fiškálna politika"
+subtitle: "Základy ekonómie 2"
+author: "Dávid Hojdan"
+institute: "EÚ SAV - IFP"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
+theme_thesis <- theme_bw() +
+  theme(panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.border=element_blank(),
+        axis.line=element_line(),
+        text=element_text(family = "serif"),
+        legend.title=element_blank(),
+        legend.position = "top",
+        axis.text.y=element_text(size = 25),
+        axis.text.x=element_text(size = 25),
+        axis.title.x = element_text(size = 25),
+        axis.title.y = element_text(size = 25))
+```
+
+---
+#Štátny rozpočet
+
+- Štátny rozpočet je súčasťou verejnej správy, je však len jedným priečinkom v peňaženke štátu
+- **V rozpočte verejnej správy sa skrývajú napr. rozpočty: **   
+ - Sociálnej a zdravotnej poisťovne
+ - Miest a obcí
+ - Zdravotníckych zariadení 
+ - VÚC
+ - ŽSR
+ - Verejných vysokých škôl
+ 
+- Vian sa dozviete napr. na stránke [Rady pre rozpočtovú zodpovednosť](https://www.rrz.sk/)
+
+---
+#Nástroje fiškálnej politiky
+
+**Zabudované (automatické) stabilizátory** po prijatí pôsobia v
+ekonomike automaticky a nevyžadujú ďalšie rozhodnutia príslušných
+štátnych orgánov, pôsobia ako proticyklické regulátor:
+
+- **progresívna dôchodková daň** daňová sadzba sa zvyšuje
+postupne s rastom základu dane, v období cyklickej expanzie
+rastú dôchodky, zvyšuje sa daň a v dôsledku toho rastú príjmy
+štátneho rozpočtu
+- **poistenie v nezamestnanosti** v čase cyklickej expanzie rastie
+zamestnanosť a zvyšujú sa platby na poistenie v
+nezamestnanosti
+- **subvencie k cenám poľnohospodárskych produktov**
+- štátny výkup poľnohospodárskych prebytkov klesá, lebo v
+čase expanzie ceny aj dopyt rastie
+
+
+V recesii tento systém pôsobí opačne, tj . znižujú sa dane, platby na
+poistenie v nezamestnanosti, klesajú príjmy do štátneho rozpočtu
+
+---
+#Nástroje fiškálnej politiky
+**Zámerné diskrétne opatrenia** sú opatrenia fiškálnej
+politiky, ktoré vyžadujú jednorazové rozhodnutia štátneho
+orgánu
+- **zmena daňových sadzieb**
+- **zmeny v štruktúre vládnych výdavkov**
+- zmeny vo **veľkosti** jednotlivých položiek
+rozpočtových **výdavkov**
+
+
+---
+#Lafferova krivka
+- Artur Laffer (poradca Ronalda Reagana 1981 1989)
+- vyjadruje závislosť **medzi daňovým výnosom štátneho rozpočtu a mierou zdanenia**
+- zníženie miery zdanenia zvýši príjmy do štátneho rozpočtu, zvýši ponuku práce a podnieti
+ekonomické subjekty aby viac sporili
+- vysoké dane znižujú motiváciu ľudí k práci a k úsporám
+- vysoké dane vyvolávajú daňové úniky a odlev kapitálu z krajiny
+
+
+
+
+
+
+
+
+
